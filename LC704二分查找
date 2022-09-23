@@ -4,7 +4,7 @@ public:
         int right = nums.size() - 1;
         int left = 0;
         while (left <= right) {   // 使用闭区间[left, right]
-           int mid = left + (right - left)/2;
+           int mid = left + ((right - left) >> 1);
            int num = nums[mid];
            if (num == target) {
                return mid;
